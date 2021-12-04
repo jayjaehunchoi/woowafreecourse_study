@@ -83,6 +83,10 @@ public void saveCars(String input) {
 
 위와 같은 방식으로 ```Cars```라는 일급 컬렉션을 만들게 됐다. 전체 ```Test```코드를 짜고, ```Cars``` 클래스를 만들고 난 뒤, 기존 코드들을 살피며 ```Service```, ```Repository``` 지우기에 돌입했다.
 
+자세한 과정은 다음 링크 커밋 이후부터 확인할 수 있다.
+
+https://github.com/woowacourse/java-racingcar-precourse/pull/349/commits/8ca46ea946703f7e8eb82c11d2f4e56a78076ded
+
 > 이 때 추가적으로 코드를 리팩토링 해줬다, Cars에 싱글톤이 반영되어 있었는데, 이를 제거했다. (컬렉션인데 싱글톤인게 말이 안된다고 생각했음)
 > 또 , Test 코드 몇몇 부분도 리팩토링 해줬다. 
 > >```TestConstant```를 만들고, ```TestInstance```를 클래스 단위로 둬 반복적으로 생성 삭제가 되는 것을 막았다. 여러 ```assertThat```이 있는 경우 ```SoftAssertions.assertSoftly```를 사용하여 중간에 테스트가 끊기지 않게끔 코드를 작성했다.
